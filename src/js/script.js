@@ -27,6 +27,8 @@ function searchForm(e) {
 function buildListItems(images) {
   if (images.length === 12) {
     refs.button.classList.remove('hidden');
+  } else {
+    refs.button.classList.add('hidden');
   }
   const markup = images.map(image => imageTemplate(image)).join('');
   refs.gallery.insertAdjacentHTML('beforeend', markup);
